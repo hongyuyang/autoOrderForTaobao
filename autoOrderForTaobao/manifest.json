@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": [ "baseOption/api/taobao.js","baseOption/jquery.js","baseOption/utils.js","baseOption/htmlDB.js","background/background.js", "background/backgroundLogic.js" ]
+   },
+   "browser_action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "打开买卖出宝贝页面以授权"
+   },
+   "content_scripts": [ {
+       "run_at": "document_end",
+      "js": ["baseOption/api/taobao.js","baseOption/jquery.js","baseOption/utils.js","baseOption/autoOrder.js"],
+      "matches": [ "http://*.tmall.com/*", "https://*.tmall.com/*", "http://*.taobao.com/*", "https://*.taobao.com/*", "http://*.1688.com/*", "https://*.1688.com/*", "http://*.alipay.com/*", "https://*.alipay.com/*", "http://*.1tsoft.com/*", "https://*.1tsoft.com/*", "http://*.suning.com/*", "http://*.yhd.com/*", "http://*.dangdang.com/*", "http://*.alimama.com/*" ]
+   } ],
+   "description": "自动快速采购,自动发货.支持:从阿里巴巴厂家一件代发代理商,淘宝代购推手.",
+   "icons": {
+      "128": "image/yi.png",
+      "48": "image/yi48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzZG9YSg/lObF2u7HWf4uJCJuLkA0wwnAgthRq/mLEOldvyazo+aUz9eHSNilR+fWwwRSSYpbGMWTi4tF1si7gOWgqRRt/y/+h8RQv5SRRnFe0RidzrJ7nr2UeuVrqi2RVheKlU2QJ33Xk01vRNCRDJszG9MCXuyWsnnZBGVU6uTE0d8VIQnEby5cuCXcsCOw4LrwcOiiiRVcisbfXO1kFktcmulCClk9pNcmEb5mvri+92jyG1a1txwlwWe7KXc6E+escbUA7k8EV5+C1NKyfbRfwj6jtTdjjzzu3ch6mKV3fQrZRl/rGdfQHN9jGrOqDO2ij3I5I1svbZ2LKIQhYQIDAQAB",
+   "manifest_version": 2,
+   "name": "自动下单",
+   "permissions": [ "background", "tabs", "cookies", "http://127.0.0.1/*","http://*.taobao.com/*", "https://*.taobao.com/*", "https://*.1688.com/*", "https://*.tmall.com/*", "https://*.alipay.com/*", "http://*.1688.com/*", "http://*.1tsoft.com/*", "http://*.1tsoft.cn/*", "http://*.suning.com/*", "http://*.yhd.com/*", "http://*.dangdang.com/*", "http://*.alimama.com/*","*://*.runoob.com/*"],
+   "version": "7.3.12"
+}
